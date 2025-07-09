@@ -1,5 +1,8 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-node:22-bookworm-slim
 
+# Voor debugging en cache-busting
+ENV CACHE_BREAKER=2025-07-09
+
 RUN mkdir /opt/flowfuse-device
 RUN npm install -g @flowfuse/device-agent
 
